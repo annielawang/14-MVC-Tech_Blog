@@ -1,18 +1,27 @@
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol class="post-list">
+  <section>
+    <h3>Your Posts are below</h3>
+    {{!-- <ol class="post-list">
     {{#each posts as |post|}}
     <li>
       {{> dashboard-post-info post}}      
     </li>
     {{/each}}
-  </ol>
-</section>
+    </ol> --}}
+    <ol class="list-group list-group-numbered mt-3 mb-3">
+    {{#each posts as |post|}}
+        {{> dashboard-post-info post}}      
+    {{/each}}
+    </ol>
+  </section>
 {{else}}
-<section>
-  <h3>You haven't posted anything yet</h3>
-</section>
+  <section>
+    {{! <h3>You haven't posted anything yet</h3> }}
+    <div class="alert alert-primary" role="alert">
+      You haven't posted anything yet!
+    </div>
+  </section>
 {{/if}}
 
-<button type="submit"><a href="/dashboard/new">Add New Post</a></button>
+{{! <button type="submit"><a href="/dashboard/new">Add New Post</a></button> }}
+<a class="btn btn-primary" href="/dashboard/new" role="button">Add New Post</a>

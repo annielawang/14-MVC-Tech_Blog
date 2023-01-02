@@ -1,5 +1,17 @@
-<form class="login-form">
-  <h2>Login</h2>
+<div class="row">
+  <h1 class="mt-5">Login</h1>
+  <form class="login-form col-6">
+    <div class="mb-3">
+      <label for="username-login" class="form-label">Username:</label>
+      <input type="text" class="form-control" id="username-login" />
+    </div>
+    <div class="mb-3">
+      <label for="password-login" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password-login" />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    {{! <h2>Login</h2>
   <div>
     <label for="username-login">Username:</label>
     <input type="text" id="username-login" />
@@ -10,15 +22,27 @@
   </div>
   <div>
     <button type="submit">Login</button>
-  </div>
-</form>
+  </div> }}
+  </form>
+  <h1 class="mt-5">Signup</h1>
+  <form class="signup-form col-6">
+    <div class="mb-3">
+      <label for="username-signup" class="form-label">Username:</label>
+      <input type="text" class="form-control" id="username-signup" />
+    </div>
+    <div class="mb-3">
+      <label for="password-signup" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="password-signup" />
+    </div>
+    <button type="submit" class="btn btn-primary">Signup</button>
+  </form>
 
-<form class="signup-form">
+  {{! <form class="signup-form">
   <h2>Sign Up</h2>
   <div>
     <label for="username-signup">Username:</label>
     <input type="text" id="username-signup" />
-  </div>  
+  </div>
   <div>
     <label for="password-signup">Password:</label>
     <input type="password" id="password-signup" />
@@ -26,5 +50,8 @@
   <div>
     <button type="submit">Signup</button>
   </div>
-</form>
+</form> }}
+
+</div>
+
 <script src="/javascript/login.js"></script>

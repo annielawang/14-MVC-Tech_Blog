@@ -2,12 +2,21 @@
 
 {{#if loggedIn}}
 <form class="comment-form">
-  <div>
+  {{!-- <div>
     <textarea name="comment-body"></textarea>
+  </div> --}}
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea
+      class="form-control"
+      id="comment"
+      rows="3"
+      name="comment-body"
+    ></textarea>
   </div>
-
   <div>
-    <button type="submit">add comment</button>    
+    {{!-- <button type="submit">add comment</button> --}}
+    <button type="submit" class="btn btn-info">add comment</button>    
   </div>
 </form>
 {{/if}}

@@ -1,12 +1,31 @@
-<div class="comments">
+{{!-- <div class="comments">
   {{#each this}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{format_date created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
+    <section class="comment">
+      <div class="meta">
+        {{user.username}}
+        on
+        {{format_date created_at}}
+      </div>
+      <div class="text">
+        {{comment_text}}
+      </div>
+    </section>
   {{/each}}
-</div>
+</div> --}}
+
+{{#each this}}
+  <div class="card mt-1 mb-1">
+    <div class="card-header">
+          {{format_date created_at}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{comment_text}}</p>
+        <footer class="blockquote-footer">
+          <cite title="Source Title">
+            <cite title="Source Title">{{user.username}}</cite></footer>
+</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+{{/each}}
